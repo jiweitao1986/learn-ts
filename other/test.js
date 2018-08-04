@@ -1,0 +1,17 @@
+"use strict";
+var zhangSan = require("./ZhangSan");
+var LiSi_1 = require('./LiSi');
+var Person_1 = require('./Person');
+console.log('//////////ZhanSan//////////');
+console.log(zhangSan.name);
+console.log(zhangSan.name);
+zhangSan.sayHello();
+console.log('//////////LiSi//////////');
+console.log(LiSi_1.name);
+console.log(LiSi_1.age);
+LiSi_1.sayHello();
+console.log('//////////LiuYi//////////');
+var liuYi = new Person_1.default('Liu', '-', 'Yi');
+console.log(liuYi.firstName);
+console.log(liuYi.lastName);
+liuYi.intro();

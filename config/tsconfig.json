@@ -1,0 +1,129 @@
+{
+
+  // 编译选项
+  "compilerOptions": {
+
+
+    // ----------------------------------------
+    // 输入、输出
+    // ----------------------------------------
+
+    // 输出根路径
+    "outDir": "./dist/src",
+
+    // 输出文件
+    // outFile: "",
+
+
+
+    // ----------------------------------------
+    // 生成选项
+    // ----------------------------------------
+
+    // 指定生成代码的ECMAScript版本
+    // "ES3" (default), "ES5", "ES6"/"ES2015", "ES2016", "ES2017" or "ESNext".
+    "target": "ES5",
+
+    // 目标代码的模块化方案
+    // 可选值："None", "CommonJS", "AMD", "System", "UMD", "ES6", "ES2015" or "ESNext"
+    // 默认值： target === "ES3" or "ES5" ? "CommonJS" : "ES6"
+    "module": "System",
+
+    // 遍历源码时采取的模块化策略，即通过哪种方式去检索源码中加载的其他文件。
+    // 可选值："Node", "Classic"
+    // 默认值：module === "AMD" or "System" or "ES6" ? "Classic" : "Node"
+    "moduleResolution": "Node",
+
+    //
+    // 候选值：
+    // ES5, ES6, ES2015, ES7, ES2016, ES2017, ES2018, ESNext,
+    // DOM, DOM.Iterable, WebWorker, ScriptHost,
+    // ES2015.Core, ES2015.Collection, ES2015.Generator, ES2015.Iterable, ES2015.Promise,
+    // ES2015.Proxy, ES2015.Reflect, ES2015.Symbol, ES2015.Symbol.WellKnown, ES2016.Array.Include,
+    // ES2017.object, ES2017.SharedMemory, ES2017.TypedArrays,
+    // ES2018.Promise, ES2018.RegExp, ESNext.AsyncIterable, ESNext.Array
+    // 默认值：
+    // --target ES5: DOM,ES5,ScriptHost
+    // --target ES6: DOM,ES6,DOM.Iterable,ScriptHost
+
+    "lib": ["DOM", "ES5", "ScriptHost"],
+
+    // 是否生成声明文件
+    // 默认值
+    "declaration": true,
+
+    //
+    "declarationDir": "./dist/types",
+
+    // 是否生成单独的sourceMap
+    "sourceMap": true,
+
+    // 是否生成内联的sourceMap，即将sourceMap放到源代码文件的后边
+    // "inlineSourceMap": true,
+
+    // 必须和sourceMap或者inlineSourceMap连用
+    "inlineSources": false,
+
+    // 移除注释
+    "removeComments": true,
+
+    // ----------------------------------------
+    // 校验性配置
+    // ----------------------------------------
+
+    // 以下配置的总称：
+    // noImplicitAny, noImplicitThis, alwaysStrict,
+    // strictNullChecks, strictFunctionTypes  strictPropertyInitialization
+    "strict": false,
+
+    // 不允许有隐式any
+    "noImplicitAny": true,
+
+    //
+    "noImplicitThis": false,
+
+    // 在每个生成文件的开头添加"use strict"
+    "alwaysStrict": false,
+
+    // ??????
+    "strictPropertyInitialization": true,
+
+    // 当代码有多个分支，如果有返回，则必须所有分支都返回，不能隐式返回
+    "noImplicitReturns": true,
+
+    // ??????
+    "noStrictGenericChecks": false,
+
+    // 不允许有未使用的本地变量
+    "noUnusedLocals": false,
+
+    // 不允许有未使用的参数
+    "noUnusedParameters": false
+
+
+    // ----------------------------------------
+    // 其他配置
+    // ----------------------------------------
+
+    // 显示生成的文件
+    // "listEmittedFiles": true,
+
+    // 显示参与编译的文件
+    // "listFiles": true
+
+  },
+
+  // 要编译的的文件
+  "files": [
+    "./index.ts"
+  ],
+
+  // 使用glob pattern指定参与编译的文件，这里指定的文件将与files合并
+  "include": [
+  ],
+
+  // 使用glob pattern指不参与编译的文件，优先级高于include，低于files
+  "exclude": [
+  ]
+
+}

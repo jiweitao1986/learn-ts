@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Collection</title>
+</head>
+<body>
+
+<script>
+  (function() {
+
+    /**
+     * 自定义集合
+     */
+    class Collection {
+
+      constructor(values) {
+        this.values = values;
+      }
+
+      [Symbol.iterator]() {
+        const self = this;
+        let index = -1;
+        let length = this.values.length;
+
+        return {
+          next: function() {
+            index ++;
+            if (index < length) {
+               return { done: false, value: self.values[index] };
+            }
+            return {done: true, value: undefined};
+          }
+        }
+      }
+
+    }
+
+    const collection = new Collection(['a', 'b', 'c']);
+
+    // 添加[Symbol.iterator]之后，可以通过for of遍历自定义集合内元素
+    for( let item of collection) {
+      console.log(item);
+    }
+
+    // 但是无法通过 索引 访问自定义集合内的元素
+    console.log('---------- access by index ----------');
+    console.log(collection[1]);
+
+
+  })();
+</script>
+
+</body>
+</html>
